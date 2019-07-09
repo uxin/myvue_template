@@ -1,5 +1,5 @@
 <template>
-  <div>测试页</div>
+  <div>我是测试页</div>
 </template>
 <script>
 export default {};

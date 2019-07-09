@@ -1,5 +1,5 @@
 <template>
-  <div>我是信息页</div>
+  <div>我是国内新闻</div>
 </template>
 <script>
 export default {};
