@@ -1,5 +1,9 @@
 <template>
-  <div>我是测试页</div>
+  <div>
+    <div>我是测试页</div>
+    <item1></item1>
+  <button v-test>全局指令</button>
+  </div>
 </template>
 <script>
 export default {
