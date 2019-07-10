@@ -4,7 +4,8 @@
 
 const path = require('path')
 
-const URL = "https://cnodejs.org";
+// const URL = "https://cnodejs.org";
+const URL = "https://m.bestcake.com";
 module.exports = {
   dev: {
 

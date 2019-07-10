@@ -8,6 +8,7 @@
   </div>
 </template>
 <script>
+import axios from "axios";
 export default {
   methods: {
     //第二种函数内部跳转方式(常用)
@@ -21,7 +22,19 @@ export default {
     // this.$apis.getTopics().then((res)=>{
     //   console.log(res);
     // })
-    this.$apis.getTopics();
+    // this.$apis.getTopics();
+
+    // 并发监听
+    // axios.all([this.$apis.getTopics(), this.$apis.getItem()]).then(
+    //   axios.spread(function(acct, perms) {
+    //     // 两个请求现在都执行完成
+    //     console.log(acct, perms);
+    //   })
+    // );
+
+    this.$apis.getIndexData().then((res)=>{
+      console.log(res);
+    })
   }
 };
 </script>
