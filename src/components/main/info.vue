@@ -21,6 +21,7 @@ export default {
     // this.$apis.getTopics().then((res)=>{
     //   console.log(res);
     // })
+    this.$apis.getTopics();
   }
 };
 </script>

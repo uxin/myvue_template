@@ -1,7 +1,11 @@
 import axios from "axios"
+
+// 判断路由域名,当有.com时表示上线,反之为开发模式
+const baseURL = location.host.indexOf(".com") != -1 ? "" : "/apis";
+// const baseURL = location.host.indexOf(".com") != -1||location.port=="8080" ? "" : "/apis";
 var instance = axios.create({
     // 设置主机
-    baseURL: '/apis',
+    baseURL,
 
     // timeout 指定请求超时的毫秒数(0 表示无超时时间)
     // 如果请求话费了超过 timeout 的时间，请求将被中断
