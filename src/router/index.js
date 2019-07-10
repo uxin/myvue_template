@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import global from "@/core/global/index";  //直接获取函数,获取路由地址
+// console.log(global.getParam());
 
 Vue.use(Router)
 
@@ -22,7 +24,7 @@ const routers = new Router({
           name: 'news',
           component: resolve => require(['@/components/main/news'], resolve),
           redirect: "/news/item1",  //重定向
-          children:[
+          children: [
             {
               path: "item1",
               name: 'item1',

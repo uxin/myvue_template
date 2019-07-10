@@ -4,13 +4,25 @@
 
 const path = require('path')
 
+const URL = "https://cnodejs.org";
 module.exports = {
   dev: {
 
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+
+    // 配置代理(解决跨域问题)
+    proxyTable: {
+      '/apis': {
+        target: URL, // 接口域名,需要代理的域名
+        secure: true, // 如果是https接口，需要配置这个参数
+        changeOrigin: true, //是否跨域
+        pathRewrite: {
+          '^/apis': '' //需要rewrite的,请求结束将 url 里面的 /apis 重写成空字符串
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST
@@ -43,7 +55,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',  //这里要改成 ./ 相对路径
 
     /**
      * Source Maps

@@ -1,12 +1,12 @@
-import item1 from "@/components/main/item1"
-export default (Vue) => {
-    // console.log(Vue);
-    // 配置全局组件指令
-    Vue.directive("test", (el, binding, vnode) => {
-        el.onclick = function () {
-            alert("ok")
-        }
-    })
+import directive from "@/core/directive/index";  //index可以省略,会自动找index.js
+import commonTemp from "@/components/commonTemp/index";
+import global from "@/core/global/index";
+import apis from "@/core/api/index";
 
-    Vue.component("item1", item1);
+// console.log(global);
+export default (Vue) => {
+    directive(Vue);   //注册全局指令
+    commonTemp(Vue);  //注册全局组件
+    Vue.prototype.$global = global;  //绑定到原型
+    Vue.prototype.$apis = apis;
 }
