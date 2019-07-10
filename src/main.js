@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import core from "@\core\core.config.js"
+vue.use(core);
 
 Vue.config.productionTip = false
 
