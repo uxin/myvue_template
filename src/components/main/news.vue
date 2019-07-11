@@ -7,6 +7,12 @@
 export default {
   data() {
     return {};
+  },
+  mounted(){
+    // this.$apis.getItem().then(res => {
+    //   console.log(res);
+    // });
+    // console.log(this.$route);
   }
 };
 </script>

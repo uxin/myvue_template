@@ -4,7 +4,7 @@
     <!-- 第一种路由传参,刷新不丢失   :to="{path:'test',query:{id:'11211113213234234'}}" -->
     <!-- <router-link :to="{path:'test',query:{id:'11211113213234234'}}">测试</router-link> -->
     <!-- <button @click="test">测试按钮</button> -->
-    <button @click="testPhp">测试接口</button>
+    <button @click="testItem">测试接口</button>
     <div class="box"></div>
   </div>
 </template>
@@ -18,6 +18,11 @@ export default {
     // },
     testPhp() {
       this.$apis.getPhp().then(res => {
+        console.log(res);
+      });
+    },
+    testItem() {
+      this.$apis.getItem().then(res => {
         console.log(res);
       });
     }
@@ -36,6 +41,12 @@ export default {
     //     console.log(acct, perms);
     //   })
     // );
+
+    // this.$apis.getItem().then(res => {
+    //   console.log(res);
+    // });
+
+    // console.log(this.$route);
   }
 };
 </script>

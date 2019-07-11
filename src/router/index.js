@@ -17,25 +17,15 @@ const routers = new Router({
         {
           path: "info",
           name: 'info',
+          meta: {
+            keepAlive: true
+          },
           component: resolve => require(['@/components/main/info'], resolve)
         },
         {
           path: "news",
           name: 'news',
           component: resolve => require(['@/components/main/news'], resolve),
-          redirect: "/news/item1",  //重定向
-          children: [
-            {
-              path: "item1",
-              name: 'item1',
-              component: resolve => require(['@/components/main/item1'], resolve),
-            },
-            {
-              path: "item2",
-              name: 'item2',
-              component: resolve => require(['@/components/main/item2'], resolve),
-            },
-          ]
         },
         {
           path: "test",
