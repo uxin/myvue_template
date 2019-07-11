@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import '@/common/css/index.scss'
 
 // 1.引入 core.config.js
 import core from "@/core/core.config.js"

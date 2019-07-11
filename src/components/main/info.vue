@@ -5,6 +5,7 @@
     <!-- <router-link :to="{path:'test',query:{id:'11211113213234234'}}">测试</router-link> -->
     <!-- <button @click="test">测试按钮</button> -->
     <button v-test>测试按钮</button>
+    <div class="box"></div>
   </div>
 </template>
 <script>
@@ -38,5 +39,10 @@ export default {
   }
 };
 </script>
-<style lang="">
+<style scoped lang="scss">
+  // .box{
+  //   width: r(100);
+  //   height: r(100);
+  //   background-color: aqua;
+  // }
 </style>
