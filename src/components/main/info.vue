@@ -4,7 +4,7 @@
     <!-- 第一种路由传参,刷新不丢失   :to="{path:'test',query:{id:'11211113213234234'}}" -->
     <!-- <router-link :to="{path:'test',query:{id:'11211113213234234'}}">测试</router-link> -->
     <!-- <button @click="test">测试按钮</button> -->
-    <button v-test>测试按钮</button>
+    <button @click="testPhp">测试接口</button>
     <div class="box"></div>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
     // test(){
     //   this.$router.push({path:"/test",query:{id:"1111111"}})
     // },
+    testPhp() {
+      this.$apis.getPhp().then(res => {
+        console.log(res);
+      });
+    }
   },
   mounted() {
     // console.log(this.$global.getParam());
@@ -24,7 +29,6 @@ export default {
     //   console.log(res);
     // })
     // this.$apis.getTopics();
-
     // 并发监听
     // axios.all([this.$apis.getTopics(), this.$apis.getItem()]).then(
     //   axios.spread(function(acct, perms) {
@@ -32,17 +36,13 @@ export default {
     //     console.log(acct, perms);
     //   })
     // );
-
-    this.$apis.getIndexData().then((res)=>{
-      console.log(res);
-    })
   }
 };
 </script>
 <style scoped lang="scss">
-  // .box{
-  //   width: r(100);
-  //   height: r(100);
-  //   background-color: aqua;
-  // }
+// .box{
+//   width: r(100);
+//   height: r(100);
+//   background-color: aqua;
+// }
 </style>

@@ -5,7 +5,9 @@
 const path = require('path')
 
 // const URL = "https://cnodejs.org";
-const URL = "https://m.bestcake.com";
+// http://127.0.0.1/php/json.php
+const URL = "http://127.0.0.1";
+// const URL = "https://m.bestcake.com";
 module.exports = {
   dev: {
 

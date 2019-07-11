@@ -24,5 +24,17 @@ class Apis {
             }
         });
     }
+    getPhp() {
+        return request({
+            method: 'post',
+            url: '/test/php/json.php',
+            data: {
+                uname: "小明",
+                upwd: "123"
+            },
+            // `headers` 是即将被发送的自定义请求头
+            // headers: {'Content-type': 'x-www-form-urlencoded'},
+        });
+    }
 }
 export default new Apis();
