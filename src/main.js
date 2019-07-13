@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import '@/common/css/index.scss'
+import 'font-awesome/css/font-awesome.css'
+
+import store from "@/core/store/index";
 
 // 1.引入 core.config.js
 import core from "@/core/core.config.js"
@@ -11,12 +14,14 @@ import core from "@/core/core.config.js"
 Vue.use(core);
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+// import mock from "@/mock/index"
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

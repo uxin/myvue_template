@@ -18,6 +18,12 @@ export default {
   },
   components: {
     lay_head
+  },
+  mounted(){
+    this.$eventHub.$on("test1",(res)=>{
+      alert(res)
+    })
+    this.$store.dispatch("test");
   }
 };
 </script>

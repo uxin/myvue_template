@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import global from "@/core/global/index";  //直接获取函数,获取路由地址
+import global from "@/core/global/index";  //直接获取函数,获取路由地址参数
 // console.log(global.getParam());
 
 Vue.use(Router)

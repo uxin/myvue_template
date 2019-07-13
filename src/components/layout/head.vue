@@ -27,7 +27,7 @@ ul {
 }
 li {
   list-style: none;
-  margin: 0 29px;
+  margin: 0 38px;
   float: left;
 
 }

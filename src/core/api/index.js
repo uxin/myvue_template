@@ -1,4 +1,5 @@
 import request from "./http";
+import mock from "@/mock/index"
 
 class Apis {
     getTopics() {
@@ -35,6 +36,15 @@ class Apis {
             // `headers` 是即将被发送的自定义请求头
             // headers: {'Content-type': 'x-www-form-urlencoded'},
         });
+    }
+
+
+
+    // 利用mock模拟get请求
+    login(data) {
+        return mock.get("/login", {
+            params: data
+        })
     }
 }
 export default new Apis();
